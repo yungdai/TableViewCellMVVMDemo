@@ -14,6 +14,13 @@
 		9FACD39C21D30A5400DB8DFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FACD39A21D30A5400DB8DFE /* LaunchScreen.storyboard */; };
 		9FACD3A721D30A5400DB8DFE /* TableViewCellMVVMDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3A621D30A5400DB8DFE /* TableViewCellMVVMDemoTests.swift */; };
 		9FACD3B221D30A5400DB8DFE /* TableViewCellMVVMDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3B121D30A5400DB8DFE /* TableViewCellMVVMDemoUITests.swift */; };
+		9FACD3C021D30A7A00DB8DFE /* MasterTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FACD3BF21D30A7A00DB8DFE /* MasterTableView.storyboard */; };
+		9FACD3C221D30AAF00DB8DFE /* MasterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3C121D30AAF00DB8DFE /* MasterTableViewController.swift */; };
+		9FACD3C421D30ADC00DB8DFE /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3C321D30ADC00DB8DFE /* MyTableViewCell.swift */; };
+		9FACD3C621D30DB100DB8DFE /* FirstTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3C521D30DB100DB8DFE /* FirstTableDataSource.swift */; };
+		9FACD3C821D30DBE00DB8DFE /* SecondTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3C721D30DBE00DB8DFE /* SecondTableDataSource.swift */; };
+		9FACD3CB21D30DF100DB8DFE /* MVVCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3CA21D30DF100DB8DFE /* MVVCViewController.swift */; };
+		9FACD3CD21D30E9600DB8DFE /* MasterTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD3CC21D30E9600DB8DFE /* MasterTableDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +54,13 @@
 		9FACD3AD21D30A5400DB8DFE /* TableViewCellMVVMDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewCellMVVMDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FACD3B121D30A5400DB8DFE /* TableViewCellMVVMDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellMVVMDemoUITests.swift; sourceTree = "<group>"; };
 		9FACD3B321D30A5400DB8DFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FACD3BF21D30A7A00DB8DFE /* MasterTableView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MasterTableView.storyboard; sourceTree = "<group>"; };
+		9FACD3C121D30AAF00DB8DFE /* MasterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableViewController.swift; sourceTree = "<group>"; };
+		9FACD3C321D30ADC00DB8DFE /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
+		9FACD3C521D30DB100DB8DFE /* FirstTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTableDataSource.swift; sourceTree = "<group>"; };
+		9FACD3C721D30DBE00DB8DFE /* SecondTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableDataSource.swift; sourceTree = "<group>"; };
+		9FACD3CA21D30DF100DB8DFE /* MVVCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVCViewController.swift; sourceTree = "<group>"; };
+		9FACD3CC21D30E9600DB8DFE /* MasterTableDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterTableDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +112,16 @@
 			isa = PBXGroup;
 			children = (
 				9FACD39121D30A5200DB8DFE /* AppDelegate.swift */,
+				9FACD3C121D30AAF00DB8DFE /* MasterTableViewController.swift */,
 				9FACD39321D30A5200DB8DFE /* ViewController.swift */,
 				9FACD39521D30A5200DB8DFE /* Main.storyboard */,
+				9FACD3BF21D30A7A00DB8DFE /* MasterTableView.storyboard */,
 				9FACD39821D30A5400DB8DFE /* Assets.xcassets */,
 				9FACD39A21D30A5400DB8DFE /* LaunchScreen.storyboard */,
 				9FACD39D21D30A5400DB8DFE /* Info.plist */,
+				9FACD3C321D30ADC00DB8DFE /* MyTableViewCell.swift */,
+				9FACD3C921D30DC900DB8DFE /* TableDataSources */,
+				9FACD3CA21D30DF100DB8DFE /* MVVCViewController.swift */,
 			);
 			path = TableViewCellMVVMDemo;
 			sourceTree = "<group>";
@@ -110,8 +129,8 @@
 		9FACD3A521D30A5400DB8DFE /* TableViewCellMVVMDemoTests */ = {
 			isa = PBXGroup;
 			children = (
-				9FACD3A621D30A5400DB8DFE /* TableViewCellMVVMDemoTests.swift */,
 				9FACD3A821D30A5400DB8DFE /* Info.plist */,
+				9FACD3A621D30A5400DB8DFE /* TableViewCellMVVMDemoTests.swift */,
 			);
 			path = TableViewCellMVVMDemoTests;
 			sourceTree = "<group>";
@@ -123,6 +142,16 @@
 				9FACD3B321D30A5400DB8DFE /* Info.plist */,
 			);
 			path = TableViewCellMVVMDemoUITests;
+			sourceTree = "<group>";
+		};
+		9FACD3C921D30DC900DB8DFE /* TableDataSources */ = {
+			isa = PBXGroup;
+			children = (
+				9FACD3C521D30DB100DB8DFE /* FirstTableDataSource.swift */,
+				9FACD3C721D30DBE00DB8DFE /* SecondTableDataSource.swift */,
+				9FACD3CC21D30E9600DB8DFE /* MasterTableDataSource.swift */,
+			);
+			path = TableDataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FACD3C021D30A7A00DB8DFE /* MasterTableView.storyboard in Resources */,
 				9FACD39C21D30A5400DB8DFE /* LaunchScreen.storyboard in Resources */,
 				9FACD39921D30A5400DB8DFE /* Assets.xcassets in Resources */,
 				9FACD39721D30A5200DB8DFE /* Main.storyboard in Resources */,
@@ -257,6 +287,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FACD39421D30A5200DB8DFE /* ViewController.swift in Sources */,
+				9FACD3CB21D30DF100DB8DFE /* MVVCViewController.swift in Sources */,
+				9FACD3C821D30DBE00DB8DFE /* SecondTableDataSource.swift in Sources */,
+				9FACD3C421D30ADC00DB8DFE /* MyTableViewCell.swift in Sources */,
+				9FACD3C221D30AAF00DB8DFE /* MasterTableViewController.swift in Sources */,
+				9FACD3CD21D30E9600DB8DFE /* MasterTableDataSource.swift in Sources */,
+				9FACD3C621D30DB100DB8DFE /* FirstTableDataSource.swift in Sources */,
 				9FACD39221D30A5200DB8DFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
