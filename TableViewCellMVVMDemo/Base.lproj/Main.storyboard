@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UEL-vf-xFA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vs0-Oj-SfX">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="sRE-Xi-TNf">
-                                <rect key="frame" x="37.5" y="43.5" width="300" height="600"/>
+                                <rect key="frame" x="37.5" y="65.5" width="300" height="600"/>
                                 <subviews>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1yk-FP-g65">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="277"/>
@@ -32,12 +32,13 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="300" height="71.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="C6s-o1-SZJ">
+                                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="C6s-o1-SZJ">
                                                             <rect key="frame" x="10" y="5" width="280" height="61.5"/>
                                                             <subviews>
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CPy-ov-C7h">
                                                                     <rect key="frame" x="0.0" y="0.0" width="61.5" height="61.5"/>
                                                                     <constraints>
+                                                                        <constraint firstAttribute="height" constant="61.5" id="4M2-FA-qGm"/>
                                                                         <constraint firstAttribute="width" secondItem="CPy-ov-C7h" secondAttribute="height" multiplier="1:1" id="tPV-6R-Bj1"/>
                                                                     </constraints>
                                                                 </imageView>
@@ -123,54 +124,107 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="firstTableView" destination="1yk-FP-g65" id="zdR-aw-4gp"/>
+                        <outlet property="secondTableView" destination="s8A-d4-pW5" id="KYc-VK-oZr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="248.80000000000001" y="26.53673163418291"/>
+            <point key="canvasLocation" x="1204" y="28.335832083958024"/>
+        </scene>
+        <!--Main Menu-->
+        <scene sceneID="Ofd-9h-TCd">
+            <objects>
+                <viewController id="bma-7B-sWm" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ssX-nI-Khe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="tXs-5w-PpC">
+                                <rect key="frame" x="13.5" y="259" width="348" height="85"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TIr-TF-bsR">
+                                        <rect key="frame" x="0.0" y="0.0" width="348" height="30"/>
+                                        <state key="normal" title="Show Regular TableView Implimentation"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="UZ8-jy-hOf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ER5-CD-kKB">
+                                        <rect key="frame" x="0.0" y="55" width="348" height="30"/>
+                                        <state key="normal" title="Show Modular TableView Controller Implimentation"/>
+                                        <connections>
+                                            <segue destination="UEL-vf-xFA" kind="show" id="Qig-u5-dit"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tXs-5w-PpC" firstAttribute="centerY" secondItem="5ev-fp-CNb" secondAttribute="centerY" id="74q-2m-Mub"/>
+                            <constraint firstItem="tXs-5w-PpC" firstAttribute="centerX" secondItem="5ev-fp-CNb" secondAttribute="centerX" id="jRf-ln-F4B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5ev-fp-CNb"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Main Menu" id="xHf-sU-YN1"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qD5-aQ-Kun" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="88.799999999999997" y="410.64467766116945"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eG1-rZ-ez5">
             <objects>
                 <viewController storyboardIdentifier="MMVCViewController" id="UEL-vf-xFA" customClass="MVVCViewController" customModule="TableViewCellMVVMDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VJ3-Nx-DKU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="46" translatesAutoresizingMaskIntoConstraints="NO" id="yO4-5s-yed">
-                                <rect key="frame" x="37.5" y="43.5" width="300" height="600"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yO4-5s-yed">
+                                <rect key="frame" x="37.5" y="0.0" width="300" height="542.5"/>
                                 <subviews>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2V-C5-18J">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="277"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="248.5"/>
                                         <connections>
                                             <segue destination="qPH-PH-qxe" kind="embed" identifier="firstTableVC" id="0rz-5C-csX"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="afm-fm-1nK">
-                                        <rect key="frame" x="0.0" y="323" width="300" height="277"/>
+                                        <rect key="frame" x="0.0" y="258.5" width="300" height="284"/>
                                         <connections>
                                             <segue destination="lBT-Dy-1jL" kind="embed" identifier="secondTableVC" id="a3S-qG-cqr"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R4T-wS-rrZ">
+                                <rect key="frame" x="117" y="552.5" width="141" height="30"/>
+                                <state key="normal" title="Toggle Bottom Table"/>
+                                <connections>
+                                    <action selector="toggleBottomTableButtonPressed:" destination="UEL-vf-xFA" eventType="touchUpInside" id="Fjm-yz-LmM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="yO4-5s-yed" firstAttribute="centerX" secondItem="Hms-Xm-B0c" secondAttribute="centerX" id="EL8-qr-FWC"/>
-                            <constraint firstItem="yO4-5s-yed" firstAttribute="centerY" secondItem="Hms-Xm-B0c" secondAttribute="centerY" id="Jt0-WS-yQc"/>
+                            <constraint firstItem="yO4-5s-yed" firstAttribute="centerY" secondItem="Hms-Xm-B0c" secondAttribute="centerY" multiplier="0.9" id="Jt0-WS-yQc"/>
                             <constraint firstItem="yO4-5s-yed" firstAttribute="height" secondItem="VJ3-Nx-DKU" secondAttribute="height" multiplier="0.9" id="dof-6s-JrC"/>
                             <constraint firstItem="yO4-5s-yed" firstAttribute="width" secondItem="VJ3-Nx-DKU" secondAttribute="width" multiplier="0.8" id="hTH-6a-Z6R"/>
+                            <constraint firstItem="R4T-wS-rrZ" firstAttribute="top" secondItem="yO4-5s-yed" secondAttribute="bottom" constant="10" id="m2X-cX-9pk"/>
+                            <constraint firstItem="R4T-wS-rrZ" firstAttribute="centerX" secondItem="yO4-5s-yed" secondAttribute="centerX" id="u6O-h3-D6Z"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hms-Xm-B0c"/>
                     </view>
-                    <connections>
-                        <outlet property="firstTableViewContainer" destination="S2V-C5-18J" id="pwo-4e-HXi"/>
-                        <outlet property="secondTableViewContainer" destination="afm-fm-1nK" id="EU4-Ts-c2u"/>
-                    </connections>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m1L-Yt-2Zr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="266" y="797"/>
+            <point key="canvasLocation" x="1204" y="772"/>
         </scene>
         <!--MasterTableVC-->
         <scene sceneID="bWS-qk-NhC">
@@ -178,7 +232,7 @@
                 <viewControllerPlaceholder storyboardIdentifier="firstTableVC" storyboardName="MasterTableView" referencedIdentifier="MasterTableVC" id="qPH-PH-qxe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DWG-Wm-p2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="616"/>
+            <point key="canvasLocation" x="1928.8" y="615.29235382308855"/>
         </scene>
         <!--MasterTableVC-->
         <scene sceneID="lTG-uN-sxJ">
@@ -186,7 +240,25 @@
                 <viewControllerPlaceholder storyboardIdentifier="secondTableVC" storyboardName="MasterTableView" referencedIdentifier="MasterTableVC" id="lBT-Dy-1jL" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9e-RR-qLS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="990" y="954"/>
+            <point key="canvasLocation" x="1929" y="893"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ys1-bA-WRO">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vs0-Oj-SfX" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uxI-Yi-Idr">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="bma-7B-sWm" kind="relationship" relationship="rootViewController" id="xNy-fP-zbK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A3Z-ub-k3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-850.39999999999998" y="410.64467766116945"/>
         </scene>
     </scenes>
 </document>

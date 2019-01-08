@@ -13,20 +13,16 @@ class MasterTableDataSource: NSObject, UITableViewDelegate {
 	var rows: Int = 0
 	var image: UIImage = UIImage()
 	var label: String?
-	
+	var identifier: String = "MyTableViewCell"
+
 	override init() {
 		super.init()
 	}
-
+	
 	required init(rows: Int = 0, image: UIImage = UIImage()) {
 	
 		self.rows = rows
 		self.image = image
-	}
-	
-	func labelRows(text: String) {
-		
-		label = text
 	}
 }
 
@@ -42,17 +38,15 @@ extension MasterTableDataSource: UITableViewDataSource {
 	}
 	
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		
-		
-		guard let cell = tableView.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as? MyTableViewCell else { return UITableViewCell()}
+
+		guard let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as? MyTableViewCell else { return UITableViewCell()}
 		
 		cell.myImageView.image = image
 		
 		if let text = label {
-			
 			cell.someTextLabel.text = text
 		}
-		
+
 		return cell
 	}
 }

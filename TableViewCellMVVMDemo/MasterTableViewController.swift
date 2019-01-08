@@ -10,13 +10,8 @@ import UIKit
 
 class MasterTableViewController: UITableViewController {
 
-	@IBOutlet var masterTableDataSource: MasterTableDataSource?
-
 	override func viewDidLoad() {
         super.viewDidLoad()
-		
-		self.tableView.delegate = masterTableDataSource
-		self.tableView.dataSource = masterTableDataSource
-		tableView.reloadData()
+
     }
 }

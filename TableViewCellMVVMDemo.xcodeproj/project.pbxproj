@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F4A4D8C21E5117100E0ACAD /* ReversedTableViewCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A4D8B21E5117100E0ACAD /* ReversedTableViewCellDataSource.swift */; };
+		9F4A4D8E21E5221500E0ACAD /* ReversedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4A4D8D21E5221500E0ACAD /* ReversedTableViewCell.swift */; };
 		9FACD39221D30A5200DB8DFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD39121D30A5200DB8DFE /* AppDelegate.swift */; };
 		9FACD39421D30A5200DB8DFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACD39321D30A5200DB8DFE /* ViewController.swift */; };
 		9FACD39721D30A5200DB8DFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9FACD39521D30A5200DB8DFE /* Main.storyboard */; };
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9F4A4D8B21E5117100E0ACAD /* ReversedTableViewCellDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedTableViewCellDataSource.swift; sourceTree = "<group>"; };
+		9F4A4D8D21E5221500E0ACAD /* ReversedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReversedTableViewCell.swift; sourceTree = "<group>"; };
 		9FACD38E21D30A5200DB8DFE /* TableViewCellMVVMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViewCellMVVMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FACD39121D30A5200DB8DFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9FACD39321D30A5200DB8DFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -113,15 +117,14 @@
 			children = (
 				9FACD39121D30A5200DB8DFE /* AppDelegate.swift */,
 				9FACD3C121D30AAF00DB8DFE /* MasterTableViewController.swift */,
+				9FACD3CA21D30DF100DB8DFE /* MVVCViewController.swift */,
 				9FACD39321D30A5200DB8DFE /* ViewController.swift */,
 				9FACD39521D30A5200DB8DFE /* Main.storyboard */,
 				9FACD3BF21D30A7A00DB8DFE /* MasterTableView.storyboard */,
 				9FACD39821D30A5400DB8DFE /* Assets.xcassets */,
 				9FACD39A21D30A5400DB8DFE /* LaunchScreen.storyboard */,
 				9FACD39D21D30A5400DB8DFE /* Info.plist */,
-				9FACD3C321D30ADC00DB8DFE /* MyTableViewCell.swift */,
 				9FACD3C921D30DC900DB8DFE /* TableDataSources */,
-				9FACD3CA21D30DF100DB8DFE /* MVVCViewController.swift */,
 			);
 			path = TableViewCellMVVMDemo;
 			sourceTree = "<group>";
@@ -149,7 +152,10 @@
 			children = (
 				9FACD3C521D30DB100DB8DFE /* FirstTableDataSource.swift */,
 				9FACD3C721D30DBE00DB8DFE /* SecondTableDataSource.swift */,
+				9F4A4D8B21E5117100E0ACAD /* ReversedTableViewCellDataSource.swift */,
 				9FACD3CC21D30E9600DB8DFE /* MasterTableDataSource.swift */,
+				9F4A4D8D21E5221500E0ACAD /* ReversedTableViewCell.swift */,
+				9FACD3C321D30ADC00DB8DFE /* MyTableViewCell.swift */,
 			);
 			path = TableDataSources;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 				9FACD3C221D30AAF00DB8DFE /* MasterTableViewController.swift in Sources */,
 				9FACD3CD21D30E9600DB8DFE /* MasterTableDataSource.swift in Sources */,
 				9FACD3C621D30DB100DB8DFE /* FirstTableDataSource.swift in Sources */,
+				9F4A4D8C21E5117100E0ACAD /* ReversedTableViewCellDataSource.swift in Sources */,
 				9FACD39221D30A5200DB8DFE /* AppDelegate.swift in Sources */,
+				9F4A4D8E21E5221500E0ACAD /* ReversedTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
