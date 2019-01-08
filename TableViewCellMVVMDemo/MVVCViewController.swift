@@ -24,17 +24,12 @@ class MVVCViewController: UIViewController {
 
 			// The code to swap between the two tableViewDataSources
 			if isReversed {
-
-				
-				secondTableViewController?.tableView.delegate = nil
-				secondTableViewController?.tableView.dataSource = nil
 				
 				secondTableViewController?.tableView.delegate = reversedTableViewDataSource
 				secondTableViewController?.tableView.dataSource =  reversedTableViewDataSource
 
 				secondTableViewController?.tableView.reloadData()
-				
-				
+
 			} else {
 				
 				secondTableViewController?.tableView.delegate = secondTableViewDataSource
